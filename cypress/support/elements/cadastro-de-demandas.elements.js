@@ -34,6 +34,10 @@ class CadastroDemandas{
         return cy.get('#resultado')
     }
 
+    get labelError(){
+        return cy.get('td label[class=error]')
+    }
+
 }
 
 export default new CadastroDemandas();
