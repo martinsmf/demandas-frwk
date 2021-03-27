@@ -9,24 +9,28 @@ Feature: Cadastrar Demanda
 
         Scenario: Cadastro com sucesso
             Given que preencho os campos:
-                  | codigo   | 2222222288    |
+                  | codigo   | 2222222300    |
                   | nome     | TesteDemanda3 |
                   | tipo     | Completa      |
                   | cenarios | 01            |
              When cadastro essa demanda
              Then devo ver a mensagem "Cadastro realizado com sucesso!"
-        @smoke
+        
         Scenario Outline: Cadastro sem sucesso
+          Todos os campos são obrigatórios
             Given que preencho os campos:
                   | codigo   | <codigo>   |
                   | nome     | <nome>     |
                   | tipo     | <tipo>     |
                   | cenarios | <cenarios> |
              When cadastro essa demanda
-             Then devo ver a mensagem "<mensagem>"
+             Then devo ver a mensagem: "<mensagem>"
 
         Examples:
-                  | codigo | nome          | tipo    | cenarios | mensagem |
-                  |        | Projeto teste | Parcial | 02       |          |
-             
+                  | codigo     | nome                        | tipo     | cenarios | mensagem                                   |
+                  | ""         | Demanda sem informar o nome | Parcial  | 02       | Preencha o Código da Demanda!              |
+                  | 2222222285 | Demanda com código repetido | Completa | 02       | Código '22222-22285' já foi cadastrado     |
+                  | 2222222291 | ""                          | Completa | 02       | Preencha o Nome da Demanda!                |
+                  | 2222222291 | Teste demanda 2             | completa | 01       | Nome \'Teste demanda 2\' já foi cadastrado |
 
+	
