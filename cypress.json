@@ -1,0 +1,7 @@
+{
+    "experimentalSourceRewriting": true,
+    "viewportWidth": 1024,
+    "viewportHeight": 768,
+    "defaultCommandTimeout": 10000,
+    "baseUrl": "https://demandas-frwk.000webhostapp.com"
+}
