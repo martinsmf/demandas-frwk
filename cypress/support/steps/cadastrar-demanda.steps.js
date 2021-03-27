@@ -17,5 +17,9 @@ When('cadastro essa demanda', () => {
 })
 
 Then('devo ver a mensagem {string}', (mensagem) => { 
-    CadastroDemandasElements.divResultado.should('be.visible', mensagem)
+    CadastroDemandasElements.divResultado.should('have.text', mensagem)
+})
+
+Then('devo ver a mensagem: {string}', (mensagem) => { 
+    CadastroDemandasElements.labelError.should('be.visible', mensagem)
 })
