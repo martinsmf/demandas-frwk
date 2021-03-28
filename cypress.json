@@ -1,4 +1,5 @@
 {
+    "testFiles": "**/*.feature",
     "experimentalSourceRewriting": true,
     "viewportWidth": 1366,
     "viewportHeight": 768,

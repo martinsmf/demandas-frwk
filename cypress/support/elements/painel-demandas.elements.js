@@ -14,6 +14,14 @@ class PainelDemandasElements{
         return cy.get('button[type=submit]')
     }
 
+    get tableColunasPainel(){
+        return cy.get('#clientes tr td')
+    }
+
+    get tableLinhasPainel(){
+        return cy.get('#clientes tr')
+    }
+
 
 }
 
