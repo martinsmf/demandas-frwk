@@ -17,6 +17,9 @@ Feature: Pesquisar demanda
                   | 22222-22289 |
 
         Scenario Outline: Pesquisar demandas pelo nome
+          caso a busca realizada for por parte do nome
+          os dados retornados na pesquisa irá trazer as
+          demandas que possuem nomes parecidos
              When realizo a pesquisa da "<demanda>"
              Then devo ver o "<codigo>" da demanda
 
@@ -24,4 +27,16 @@ Feature: Pesquisar demanda
                   | demanda         | codigo      |
                   | Teste demanda   | 22222-22285 |
                   | Teste demanda 2 | 89999-99999 |
+
+
+        Scenario Outline: Pesquisar demanda pelo responsável
+            Given que seleciono o "<responsavel>"
+             When realizo a pesquisa
+             Then devo ver a "<demanda>"
+
+        Examples:
+                  | responsavel   | demanda     |
+                  | Cristiano     | 00001-00003 |
+                  | Elaine Borges | 17624-1001  |
+
 

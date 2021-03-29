@@ -2,6 +2,14 @@
 
 class PainelDemandasElements{
 
+    get selectResponsavel(){
+        return cy.get('select[name=responsavel]')
+    }
+
+    get optionResaveis(){
+        return cy.get('select[name=responsavel] option')
+    }
+
     get paragraph(){
         return cy.get('p[class$=label-info]')
     }

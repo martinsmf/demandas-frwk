@@ -12,6 +12,10 @@ class PainelDemandasPage{
     linhasDoPainel(){
         PainelDemandasElements.tableLinhasPainel.nextAll()
     }
+
+    selcionaResponsavel(responsavel){
+        PainelDemandasElements.selectResponsavel.select(`${responsavel}`)
+    }
 }
 
 export default new PainelDemandasPage();
