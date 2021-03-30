@@ -17,4 +17,3 @@ Then('devo ser direcionado para o painel de demandas', () => {
 Then('ver o painel de demandas', () => {
     PainelDemandasElements.paragraph.should('contain', 'Painel de Demandas')
 })
-
