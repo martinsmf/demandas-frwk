@@ -3,6 +3,7 @@
 
 import CadastroDemandasPage from '../pages/cadastro-de-demandas.page'
 import CadastroDemandasElements from '../elements/cadastro-de-demandas.elements'
+import LabelErrorElements from '../elements/label-error.elements';
 
 Given('que preencho os campos:', dataTable => {
     cy.visit('/cadastrar.php')
@@ -17,9 +18,9 @@ When('cadastro essa demanda', () => {
 })
 
 Then('devo ver a mensagem {string}', (mensagem) => { 
-    CadastroDemandasElements.divResultado.should('have.text', mensagem)
+    CadastroDemandasElements.alertResultadoSucesso.should('contain.text', mensagem)
 })
 
 Then('devo ver a mensagem: {string}', (mensagem) => { 
-    CadastroDemandasElements.labelError.should('be.visible', mensagem)
+    LabelErrorElements.labelError.should('be.visible', mensagem)
 })

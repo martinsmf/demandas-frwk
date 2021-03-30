@@ -10,7 +10,7 @@ Feature: Cadastrar Demanda
         Scenario: Cadastro com sucesso
             Given que preencho os campos:
                   | codigo   | 2222222300    |
-                  | nome     | TesteDemanda3 |
+                  | nome     | TesteDemanda6 |
                   | tipo     | Completa      |
                   | cenarios | 01            |
              When cadastro essa demanda

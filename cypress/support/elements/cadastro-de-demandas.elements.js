@@ -30,12 +30,8 @@ class CadastroDemandas{
         return cy.get('[value=Limpar]')
     }
 
-    get divResultado(){
+    get alertResultadoSucesso(){
         return cy.get('#resultado')
-    }
-
-    get labelError(){
-        return cy.get('td label[class=error]')
     }
 
 }
